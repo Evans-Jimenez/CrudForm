@@ -107,6 +107,14 @@ namespace CrudForm
             DGVContacts.DataSource = null;
             DGVContacts.DataSource = Contacts;
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Contacts.RemoveAt(0);
+            MessageBox.Show("Registro Borrado.");
+            DGVContacts.DataSource = null;
+            DGVContacts.DataSource = Contacts;
+        }
     }
 
     public class Contact
