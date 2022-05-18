@@ -111,8 +111,8 @@ namespace CrudForm
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             Contacts.RemoveAt(0);
-            MessageBox.Show("Registro Borrado.");
             DGVContacts.DataSource = null;
+            MessageBox.Show("Registro Borrado.");
             DGVContacts.DataSource = Contacts;
         }
     }
@@ -120,20 +120,20 @@ namespace CrudForm
     public class Contact
     {
         public string ID { get; set; }
-        
-        public string Nombre { get; set;}
-        
-        public string Apellido { get; set;}
-        
-        public string Dirrecion { get; set;}
-        
-        public string Pais { get; set;}
-        
-        public string Ciudad { get; set;} 
-        
-        public string Celular { get; set;}
-        
-        public string Correo { get; set;}
-        
+
+        public string Nombre { get; set; }
+
+        public string Apellido { get; set; }
+
+        public string Dirrecion { get; set; }
+
+        public string Pais { get; set; }
+
+        public string Ciudad { get; set; }
+
+        public string Celular { get; set; }
+
+        public string Correo { get; set; }
+
     }
 }
