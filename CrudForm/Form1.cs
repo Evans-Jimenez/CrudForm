@@ -115,6 +115,31 @@ namespace CrudForm
             MessageBox.Show("Registro Borrado.");
             DGVContacts.DataSource = Contacts;
         }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCiudad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPais_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class Contact

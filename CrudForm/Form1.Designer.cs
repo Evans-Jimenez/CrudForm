@@ -78,7 +78,7 @@
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(117, 71);
+            this.txtNombre.Location = new System.Drawing.Point(117, 54);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(221, 22);
             this.txtNombre.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(33, 71);
+            this.lblNombre.Location = new System.Drawing.Point(33, 54);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 20);
             this.lblNombre.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.txtApellido.BackColor = System.Drawing.SystemColors.Window;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellido.Enabled = false;
-            this.txtApellido.Location = new System.Drawing.Point(117, 121);
+            this.txtApellido.Location = new System.Drawing.Point(117, 88);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(221, 22);
             this.txtApellido.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Enabled = false;
             this.lblApellido.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(32, 124);
+            this.lblApellido.Location = new System.Drawing.Point(32, 91);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(70, 20);
             this.lblApellido.TabIndex = 4;
@@ -120,7 +120,7 @@
             this.txtDireccion.BackColor = System.Drawing.SystemColors.Window;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Location = new System.Drawing.Point(117, 158);
+            this.txtDireccion.Location = new System.Drawing.Point(117, 125);
             this.txtDireccion.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 158);
+            this.label1.Location = new System.Drawing.Point(26, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 6;
@@ -143,59 +143,64 @@
             this.txtCiudad.BackColor = System.Drawing.SystemColors.Window;
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCiudad.Enabled = false;
-            this.txtCiudad.Location = new System.Drawing.Point(116, 369);
+            this.txtCiudad.Location = new System.Drawing.Point(116, 342);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(222, 22);
             this.txtCiudad.TabIndex = 9;
+            this.txtCiudad.TextChanged += new System.EventHandler(this.txtCiudad_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 371);
+            this.label2.Location = new System.Drawing.Point(42, 344);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Cuidad";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPais
             // 
             this.txtPais.BackColor = System.Drawing.SystemColors.Window;
             this.txtPais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPais.Enabled = false;
-            this.txtPais.Location = new System.Drawing.Point(116, 415);
+            this.txtPais.Location = new System.Drawing.Point(116, 388);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(222, 22);
             this.txtPais.TabIndex = 11;
+            this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 417);
+            this.label3.Location = new System.Drawing.Point(53, 390);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Pais";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtCelular
             // 
             this.txtCelular.BackColor = System.Drawing.SystemColors.Window;
             this.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCelular.Enabled = false;
-            this.txtCelular.Location = new System.Drawing.Point(117, 457);
+            this.txtCelular.Location = new System.Drawing.Point(435, 342);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(114, 22);
             this.txtCelular.TabIndex = 13;
+            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 459);
+            this.label4.Location = new System.Drawing.Point(361, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 12;
@@ -205,7 +210,7 @@
             // 
             this.btnAñadir.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAñadir.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(456, 371);
+            this.btnAñadir.Location = new System.Drawing.Point(120, 435);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(111, 40);
             this.btnAñadir.TabIndex = 14;
@@ -217,7 +222,7 @@
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.Wheat;
             this.btnActualizar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(456, 449);
+            this.btnActualizar.Location = new System.Drawing.Point(365, 436);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(111, 40);
             this.btnActualizar.TabIndex = 15;
@@ -229,7 +234,7 @@
             // 
             this.btnBorrar.BackColor = System.Drawing.Color.Brown;
             this.btnBorrar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(584, 371);
+            this.btnBorrar.Location = new System.Drawing.Point(248, 435);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(103, 40);
             this.btnBorrar.TabIndex = 16;
@@ -241,7 +246,7 @@
             // 
             this.btnCargar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCargar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(584, 449);
+            this.btnCargar.Location = new System.Drawing.Point(493, 436);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(103, 40);
             this.btnCargar.TabIndex = 17;
@@ -264,7 +269,7 @@
             this.txtCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Enabled = false;
-            this.txtCorreo.Location = new System.Drawing.Point(310, 457);
+            this.txtCorreo.Location = new System.Drawing.Point(435, 386);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(140, 22);
             this.txtCorreo.TabIndex = 20;
@@ -274,7 +279,7 @@
             this.Correo.AutoSize = true;
             this.Correo.Enabled = false;
             this.Correo.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo.Location = new System.Drawing.Point(245, 459);
+            this.Correo.Location = new System.Drawing.Point(363, 388);
             this.Correo.Name = "Correo";
             this.Correo.Size = new System.Drawing.Size(59, 20);
             this.Correo.TabIndex = 19;
