@@ -168,7 +168,6 @@
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(222, 22);
             this.txtPais.TabIndex = 11;
-            this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
             // 
             // label3
             // 

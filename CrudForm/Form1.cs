@@ -14,6 +14,7 @@ namespace CrudForm
     {
         public Boolean Adding = false;
         List<Contact> Contacts = new List<Contact>();
+
         public CrudForm()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace CrudForm
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+            //Para añadir un registro, se desabilitan los demas botones.
             EmptyControls();
             EnableControls(true);
             Adding = true;
@@ -32,6 +34,7 @@ namespace CrudForm
 
         private void EmptyControls()
         {
+            //Para vaciar las cajas de texto tan pronto como los datos sean insertados en el datagridview.
             txtID.Text = string.Empty;
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
@@ -45,6 +48,7 @@ namespace CrudForm
 
         private void EnableControls(bool enabled)
         {
+            //Para abilitar el caja de texto para insertar la informacion.
             txtNombre.Enabled = enabled;
             txtApellido.Enabled = enabled;
             txtID.Enabled = enabled;
@@ -62,6 +66,7 @@ namespace CrudForm
 
         private void Save()
         {
+            //Para guardar el registro en la clase que se mostrara en el datagridview
             if (Adding == true)
             {
                 //Se añade un nuevo registro
@@ -103,23 +108,18 @@ namespace CrudForm
         }
 
         private void GetContacts()
-        {
+        {//Para mostrar los usuarios registrados en el DataGrudView, y actualizarlos.
             DGVContacts.DataSource = null;
             DGVContacts.DataSource = Contacts;
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+            //Para borrar el primer registro en el datagridview
             Contacts.RemoveAt(0);
             DGVContacts.DataSource = null;
             MessageBox.Show("Registro Borrado.");
             DGVContacts.DataSource = Contacts;
-        }
-
-
-        private void txtPais_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 
