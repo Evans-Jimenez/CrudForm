@@ -147,7 +147,6 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(222, 22);
             this.txtCiudad.TabIndex = 9;
-            this.txtCiudad.TextChanged += new System.EventHandler(this.txtCiudad_TextChanged);
             // 
             // label2
             // 
@@ -159,7 +158,6 @@
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Cuidad";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPais
             // 
@@ -182,7 +180,6 @@
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Pais";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtCelular
             // 
@@ -193,7 +190,6 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(114, 22);
             this.txtCelular.TabIndex = 13;
-            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
             // 
             // label4
             // 
