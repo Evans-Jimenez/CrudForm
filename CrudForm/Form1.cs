@@ -108,8 +108,7 @@ namespace CrudForm
                 btnAñadir.Enabled = true;
                 btnBorrar.Enabled = true;
                 btnActualizar.Enabled = true;
-
-                GetContacts();
+                btnCargar.Enabled = true;
 
             }
             else
