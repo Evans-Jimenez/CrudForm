@@ -50,7 +50,9 @@ namespace CrudForm
         {
             Save();
         }
-        # endregion
+        #endregion
+
+        #region metodos
         private void EmptyControls()
         {
             //Para vaciar las cajas de texto tan pronto como los datos sean insertados en el datagridview.
@@ -122,7 +124,8 @@ namespace CrudForm
             DGVContacts.DataSource = Contacts;
         }
 
-        }
+        #endregion
+    }
 
     public class Contact
     {
