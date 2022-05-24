@@ -19,19 +19,38 @@ namespace CrudForm
         {
             InitializeComponent();
         }
+        #region Botones
 
-        private void btnAñadir_Click(object sender, EventArgs e)
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+                {
+                    //Para borrar el primer registro en el datagridview
+                    Contacts.RemoveAt(0);
+                    DGVContacts.DataSource = null;
+                    MessageBox.Show("Registro Borrado.");
+                    DGVContacts.DataSource = Contacts;
+                }
+         private void btnAñadir_Click(object sender, EventArgs e)
+            {
+                //Para añadir un registro, se desabilitan los demas botones.
+                EmptyControls();
+                EnableControls(true);
+                Adding = true;
+                txtID.Text = Guid.NewGuid().ToString();
+                btnAñadir.Enabled = false;
+                btnBorrar.Enabled = false;
+                btnCargar.Enabled = false;
+            }
+
+        private void btnCargar_Click(object sender, EventArgs e)
         {
-            //Para añadir un registro, se desabilitan los demas botones.
-            EmptyControls();
-            EnableControls(true);
-            Adding = true;
-            txtID.Text = Guid.NewGuid().ToString();
-            btnAñadir.Enabled = false;
-            btnBorrar.Enabled = false;
-            btnCargar.Enabled = false;
+            GetContacts();
         }
-
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+        # endregion
         private void EmptyControls()
         {
             //Para vaciar las cajas de texto tan pronto como los datos sean insertados en el datagridview.
@@ -57,11 +76,6 @@ namespace CrudForm
             txtCorreo.Enabled = enabled;
             txtCelular.Enabled = enabled;
             txtPais.Enabled = enabled;
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            Save();
         }
 
         private void Save()
@@ -102,26 +116,13 @@ namespace CrudForm
             }
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-            GetContacts();
-        }
-
         private void GetContacts()
         {//Para mostrar los usuarios registrados en el DataGrudView, y actualizarlos.
             DGVContacts.DataSource = null;
             DGVContacts.DataSource = Contacts;
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            //Para borrar el primer registro en el datagridview
-            Contacts.RemoveAt(0);
-            DGVContacts.DataSource = null;
-            MessageBox.Show("Registro Borrado.");
-            DGVContacts.DataSource = Contacts;
         }
-    }
 
     public class Contact
     {
