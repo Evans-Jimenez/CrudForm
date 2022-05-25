@@ -26,8 +26,7 @@ namespace CrudForm
                 {
                     //Para borrar el primer registro en el datagridview
                     Contacts.RemoveAt(0);
-                    DGVContacts.DataSource = null;
-                    MessageBox.Show("Registro Borrado.");
+                    MessageBox.Show("Se ha borrado el primer registro.");
                     DGVContacts.DataSource = Contacts;
                 }
          private void btnAñadir_Click(object sender, EventArgs e)
@@ -100,7 +99,7 @@ namespace CrudForm
 
                 Contacts.Add(contact);
 
-                MessageBox.Show("Contacto Registrado.");
+                MessageBox.Show("Contacto Registrado en la base de datos.");
 
                 EmptyControls();
                 EnableControls(false);
@@ -116,11 +115,13 @@ namespace CrudForm
                 //se actualiza un registro ya existente
             }
         }
-
+        
         private void GetContacts()
         {//Para mostrar los usuarios registrados en el DataGrudView, y actualizarlos.
+            
+            MessageBox.Show("Se cargaran y/o actualizaran los datos registrados.");
             DGVContacts.DataSource = null;
-            DGVContacts.DataSource = Contacts;
+            DGVContacts.DataSource = Contacts;   
         }
 
         #endregion
